@@ -1,0 +1,20 @@
+# ignore third party components
+bower_components
+node_modules
+
+# ignore compiled output
+.sass-cache
+dist
+
+# ignore OS noise
+.DS_Store
+
+# ignore python outputs
+*.pyc
+
+# ignore robot outputs
+tests/**/*.xml
+tests/**/*.html
+tests/**/selenium-screenshot-*.png
+**/teamcity-info.xml
+
