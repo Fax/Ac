@@ -1,6 +1,19 @@
 <h1>Main Template</h1>
 
-{{data | json}}
+<div >
+    Welcome, 
+    {{user.authData.google.displayName}}
+    {{user.authData.google.email}}
+</div>
+
+<button ng-click="loginWithGoogle()">Login with Google</button>
+
+<ul>
+    <li ng-repeat="message in messages">
+        {{message.text}}
+    </li>
+</ul>
+
 
 <input type="text" ng-model="newmessage"></input>
 <button ng-click="add(newmessage)">Save</button>
