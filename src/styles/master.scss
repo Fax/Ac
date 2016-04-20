@@ -10,3 +10,22 @@ $font-family: 'Anonymous Pro', ;
   -webkit-font-smoothing: antialiased;
   text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
+
+
+.board-layer {
+  .row-element {
+    .cell-element {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      .cell-inner {
+        text-align: center;
+        padding: 1px;
+        height: 100%;
+        &.selected {
+          background-color: orangered;
+        }
+       }
+    }
+  }
+}

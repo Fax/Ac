@@ -1,0 +1,13 @@
+
+<div class="board-layer">
+    <div ng-repeat="row in board" class="row-element">
+        <div ng-repeat="cell in row" 
+            class="cell-element" 
+            ng-click="selectCell(cell)">
+            <div class="cell-inner"  
+                ng-class="{'selected':selected.address === cell.address}">
+                {{cell.address}}
+            </div>
+        </div>
+    </div>
+</div>
