@@ -1,6 +1,7 @@
 export default /* @ngInject */ function ($q, 
     $firebaseAuth, 
-    AngularFire) { 
+    AngularFire,
+    dataService) { 
         return {
             user: {
                 authData : {},
@@ -27,7 +28,9 @@ export default /* @ngInject */ function ($q,
                     })
                 .then(function(authData) {
                     self.user.authData = authData;
+                    self.user.userId = authData.uid;
                     self.user.authStatus = "OK";
+                    self.user.profile = dataService.getProfile(authData.uid);
                     console.log(self);
                     console.log(authData);
                 }).catch(function(error) {

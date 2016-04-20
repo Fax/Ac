@@ -1,4 +1,4 @@
-export default /* @ngInject */ function (){
+export default /* @ngInject */ function (authenticationService){
     return {
         templateUrl : '/templates/board.html',
         link : function(scope, ele, attrs, ctrl) {
@@ -16,10 +16,11 @@ export default /* @ngInject */ function (){
                     };
                 }
             }
+            
         },
         controller : ['$scope',function($scope){
+            
             $scope.selectCell = function(cell){
-
                 $scope.selected = cell;
             }
             
